@@ -336,7 +336,7 @@ def get_rds_uri(region_name):
         logging.error(e)
         raise e
 
-    return f"postgresql+psycopg2://{rds_username}:{rds_password}@{rds_endpoint}:{rds_port}/{rds_db_name}"
+    return f"postgresql+psycopg2://{rds_username}:{rds_password}@{rds_endpoint}:{rds_port}/{rds_db_name}?sslmode=require"
 
 
 def load_samples():
